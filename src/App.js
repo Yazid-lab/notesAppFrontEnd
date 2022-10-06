@@ -90,7 +90,7 @@ const App = () => {
       ) : (
         <div>
           <p>{user.name} logged-in</p>
-           {noteForm()} 
+          {noteForm()}
           <button onClick={handleLogout}>logout</button>
         </div>
       )}
