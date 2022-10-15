@@ -50,7 +50,7 @@ const App = () => {
     })
   }
   const noteForm = () => (
-    <Togglable buttonLabel='new note' ref={noteFormRef}>
+    <Togglable buttonLabel='add new note' ref={noteFormRef}>
       <NoteForm createNote={addNote} />
     </Togglable>
   )
@@ -64,7 +64,7 @@ const App = () => {
       .then((returnedNote) => {
         setNotes(notes.map((note) => (note.id !== id ? note : returnedNote)))
       })
-      .catch((error) => {
+      .catch(() => {
         setErrorMessage(
           `Note '${note.content}' was already removed from server`
         )
